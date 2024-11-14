@@ -1,0 +1,26 @@
+# Ignore system files and secrets
+*.db
+*.db-wal
+*.db-shm
+*.log
+*.yaml.backup
+*.yaml.save
+home-assistant_v2.db
+home-assistant_v2*
+OZW_Log.txt
+http.oauth2.token_cache
+
+# Ignore secrets file
+secrets.yaml
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore directories used by add-ons or integrations
+.cloud/
+.storage/
+.dep/
+.dashboards/
