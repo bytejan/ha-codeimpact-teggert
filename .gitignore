@@ -24,3 +24,6 @@ __pycache__/
 .storage/
 .dep/
 .dashboards/
+
+# Ignore idea
+.idea
