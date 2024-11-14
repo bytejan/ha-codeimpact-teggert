@@ -2,7 +2,6 @@ homeassistant:
   name: Cozy Home
   latitude: 50,8795389
   longitude: 5,9208255
-  elevation: !secret homeassistant_elevation
   unit_system: metric
   temperature_unit: C
   time_zone: Europe/Amsterdam
