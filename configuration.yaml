@@ -44,4 +44,9 @@ blueprint: !include_dir_named blueprints/
 lovelace:
   mode: yaml
   dashboards:
-    home_dashboard: !dashboards/dashboard-main.yaml
+    home_dashboard:
+      mode: yaml
+      title: "Home Control"
+      icon: "mdi:home"
+      show_in_sidebar: true
+      views: !include_dir_merge_list dashboards/home_views
