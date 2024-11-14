@@ -7,7 +7,7 @@ install_addon() {
     ha addons install "$addon_slug"
     echo "Setting $addon_slug add-on to start on boot..."
     ha addons start "$addon_slug"
-    ha addons options --auto "$addon_slug"
+#    ha addons options --auto "$addon_slug"
     echo "$addon_slug add-on installed and configured to start on boot."
 }
 

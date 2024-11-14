@@ -1,11 +1,47 @@
+homeassistant:
+  name: Cozy Home
+  latitude: 50,8795389
+  longitude: 5,9208255
+  elevation: !secret homeassistant_elevation
+  unit_system: metric
+  temperature_unit: C
+  time_zone: Europe/Amsterdam
+  language: EN
+  country: NL
+  currency: EUR
+  packages: !include_dir_named packages
 
 # Loads default set of integrations. Do not remove.
 default_config:
 
-# Load frontend themes from the themes folder
-frontend:
-  themes: !include_dir_merge_named themes
+# Automations
+automation: !include_dir_merge_list automations/
 
-automation: !include automations.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
+# Scripts
+script: !include_dir_merge_named scripts/
+
+# Groups
+group: !include groups.yaml
+
+# Integrations
+unifi: !include integrations/unifi.yaml
+alexa: !include integrations/alexa.yaml
+frigate: !include integrations/frigate.yaml
+
+# Sensors
+sensor: !include_dir_merge_list sensors/
+
+# Zones
+zone: !include zones.yaml
+
+# Themes
+frontend:
+  themes: !include_dir_merge_named themes/
+
+# Blueprints
+blueprint: !include_dir_named blueprints/
+
+# Dashboards
+lovelace:
+  mode: yaml
+  resources: !include_dir_merge_list dashboards/
