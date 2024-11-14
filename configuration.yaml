@@ -44,4 +44,6 @@ blueprint: !include_dir_named blueprints/
 # Dashboards
 lovelace:
   mode: yaml
-  resources: !include_dir_merge_list dashboards/
+#  resources: !include_dir_merge_list dashboards/
+  views:
+    - !dashboards/dashboard-main.yaml
