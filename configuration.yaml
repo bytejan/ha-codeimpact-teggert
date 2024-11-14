@@ -40,9 +40,6 @@ frontend:
 # Blueprints
 blueprint: !include_dir_named blueprints/
 
-views:
-  - !dashboards/dashboard-main.yaml
-
 # Dashboards
 lovelace:
   mode: yaml
