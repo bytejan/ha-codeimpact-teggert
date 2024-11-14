@@ -1,11 +1,12 @@
 homeassistant:
   name: Cozy Home
-  latitude: 50,8795389
-  longitude: 5,9208255
+  latitude: 50.8795389
+  longitude: 5.9208255
   unit_system: metric
   temperature_unit: C
   time_zone: Europe/Amsterdam
-  language: EN
+  elevation: 455
+  language: en
   country: NL
   currency: EUR
   packages: !include_dir_named packages
@@ -39,14 +40,3 @@ frontend:
 
 # Blueprints
 blueprint: !include_dir_named blueprints/
-
-# Dashboards
-lovelace:
-  mode: yaml
-  dashboards:
-    home_dashboard:
-      mode: yaml
-      title: "Home Control"
-      icon: "mdi:home"
-      show_in_sidebar: true
-      views: !include_dir_merge_list dashboards/home_views
