@@ -1,2 +1,2 @@
-alexa: !include integrations/alexa.yaml
+alexa:
 
