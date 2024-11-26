@@ -5,12 +5,14 @@ This repository contains the configuration files, scripts, and automations for m
 ## Table of Contents
 - [Overview](#overview)
 - [Protocols & Platforms](#protocols--platforms)
-- [Global Configuration ](#global--configuration)
+- [Global Configuration ](#global-configuration)
 - [Devices & Integrations](#devices--integrations)
   - [Smart Speakers](#smart-speakers)
   - [Custom Devices](#custom-devices)
   - [Unifi Network & Security](#unifi-network--security)
 - [Room Configurations](#room-configurations)
+  - [Rooms](#rooms)
+  - [Room setup](#room-setup)
 - [Scripts & Automations](#scripts--automations)
 - [Security Setup](#security-setup)
 - [Future Plans](#future-plans)
@@ -30,7 +32,7 @@ These are the core protocols and platforms integrated into this smart home setup
 - **WiFi**: Utilized for certain high-bandwidth devices and custom-built devices.
 - **ESPHome** (Planned): Potential platform for custom devices built on ESP32/ESP8266 boards, offering control over sensors, lights, and other components.
 
-## Global Configuration 
+## Global Configuration
 
 - MQTT
 
@@ -53,9 +55,35 @@ The network setup is powered by Ubiquiti’s Unifi ecosystem:
 - **Unifi Switch**: Managed PoE switch connecting various networked devices.
 - **Unifi Cameras**: Security cameras connected to the Unifi setup for real-time monitoring.
 - **Unifi Doorbell**: Smart doorbell integrated with Home Assistant to trigger automations.
-- **Alarrmo Integration**: Planned integration to manage security events triggered by the doorbell and cameras.
+- **Alarmo Integration**: Planned integration to manage security events triggered by the doorbell and cameras.
 
 ## Room Configurations
+
+### Rooms
+Crawl Space
+
+First floor
+-	Driveway (Optional)
+-	Front yard
+-	Entrance
+-	Hall (Cabinet)
+-	Toilet
+-	Kitchen
+-	Laundry Room
+-	Living Room
+-	Dining room
+-	Office
+-	(stairs)
+-	Toilet
+
+2nd floor
+-	Bathroom
+-	Bedroom
+-	Guest room
+-	Landing
+-	Boiler Room
+
+### Room setup
 Each room has unique configurations based on the devices and protocols used:
 
 1. **Living Room**:

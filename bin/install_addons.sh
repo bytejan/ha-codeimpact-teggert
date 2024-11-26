@@ -22,6 +22,6 @@ fi
 install_addon "core_ssh"      # SSH & Web Terminal
 install_addon "core_samba"    # Samba share for easy access to config files
 install_addon "core_mosquitto" # MQTT broker
-install_addon "core_hacc"     # HACC (example slug, replace if needed)
+wget -O - https://get.hacs.xyz | bash -
 
 echo "All add-ons have been installed and configured."
