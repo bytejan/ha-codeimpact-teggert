@@ -2,8 +2,12 @@ views:
   # View tab title.
   - title: Example lov new
     cards:
-      # The markdown card will render markdown text.
-      - type: markdown
-        title: Dashboard lov
-        content: >
-          Welcome to your **dashboard lov**.
+      - type: light
+        entity: light.kitchen_spots
+        name: Kitchen Spots
+      - type: light
+        entity: light.dining_room_table_lights
+        name: Dining Room Table
+      - type: light
+        entity: light.living_room_hue_play
+        name: Living Room Hue Play

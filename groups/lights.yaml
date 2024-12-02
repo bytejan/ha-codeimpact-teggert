@@ -1,6 +1,6 @@
 light:
   - platform: group
-    name: Kitchen Spots
+    name: "Kitchen Spots"
     entities:
       - light.kitchen_spot_1
       - light.kitchen_spot_2
@@ -12,7 +12,7 @@ light:
       - light.kitchen_spot_8
 
   - platform: group
-    name: Dining Room Spots
+    name: "Dining Room Spots"
     entities:
       - light.dining_table_spot_1
       - light.dining_table_spot_2
@@ -25,7 +25,7 @@ light:
       - light.spot_5
 
   - platform: group
-    name: Living Room Spots
+    name: "Living Room Spots"
     entities:
       - light.living_room_spot_1
       - light.living_room_spot_2
