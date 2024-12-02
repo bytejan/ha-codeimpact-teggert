@@ -4,7 +4,7 @@ views:
     path: dining-room
     cards:
       - type: entities
-        title: Dining Room Lights
+        title: Dining Room Spots
         entities:
           - light.dining_room_spots
           - light.dining_table_spot_1
