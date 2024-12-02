@@ -25,7 +25,7 @@
     - light.dining_table_lamp_1
     - light.dining_table_lamp_2
     - light.dining_table_lamp_3
-    - light.hue_bloom_dining_room
+#    - light.hue_bloom_dining_room
 
 - platform: group
   name: "Living Room Lights"
