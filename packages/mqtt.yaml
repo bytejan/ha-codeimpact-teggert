@@ -23,8 +23,8 @@ light:
     command_topic: "home/dining_room_table/lights/command"
     brightness_state_topic: "home/dining_room_table/lights/brightness/state"
     brightness_command_topic: "home/dining_room_table/lights/brightness/command"
-    rgb_state_topic: "home/dining_room_table/lights/state"
-    rgb_command_topic: "home/dining_room_table/lights/command"
+    rgb_state_topic: "home/dining_room_table/lights/rgb/state"
+    rgb_command_topic: "home/dining_room_table/lights/rgb/command"
 
   - platform: mqtt
     name: "Living Room Hue Play"
