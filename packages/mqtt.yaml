@@ -9,6 +9,15 @@ light:
     rgb_command_topic: "home/kitchen/spots/rgb/command"
 
   - platform: mqtt
+    name: "Dining Room Spots"
+    state_topic: "home/dining_room/spots/state"
+    command_topic: "home/dining_room/spots/command"
+    brightness_state_topic: "home/dining_room/spots/brightness/state"
+    brightness_command_topic: "home/dining_room/spots/brightness/command"
+    rgb_state_topic: "home/dining_room/spots/rgb/state"
+    rgb_command_topic: "home/dining_room/spots/rgb/command"
+
+  - platform: mqtt
     name: "Dining Room Table Lights"
     state_topic: "home/dining_room/table/state"
     command_topic: "home/dining_room/table/command"

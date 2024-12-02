@@ -9,5 +9,8 @@ views:
         entity: light.dining_room_table_lights
         name: Dining Room Table
       - type: light
+        entity: light.dining_room_spots
+        name: Dining Room Spots
+      - type: light
         entity: light.living_room_hue_play
         name: Living Room Hue Play
