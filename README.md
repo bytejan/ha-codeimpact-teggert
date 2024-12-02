@@ -101,6 +101,7 @@ First floor
 -	Office
 -	(stairs)
 -	Toilet
+-	Backyard
 
 2nd floor
 -	Bathroom
