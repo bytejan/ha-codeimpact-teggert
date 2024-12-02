@@ -20,7 +20,7 @@
     - light.dining_room_spot_5
 
 - platform: group
-  name: "Dining Room Table lights"
+  name: "Dining Room Table Lights"
   entities:
     - light.dining_table_lamp_1
     - light.dining_table_lamp_2

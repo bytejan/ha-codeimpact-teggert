@@ -19,12 +19,12 @@ light:
 
   - platform: mqtt
     name: "Dining Room Table Lights"
-    state_topic: "home/dining_room/table/state"
-    command_topic: "home/dining_room/table/command"
-    brightness_state_topic: "home/dining_room/table/brightness/state"
-    brightness_command_topic: "home/dining_room/table/brightness/command"
-    rgb_state_topic: "home/dining_room/table/rgb/state"
-    rgb_command_topic: "home/dining_room/table/rgb/command"
+    state_topic: "home/dining_room_table/lights/state"
+    command_topic: "home/dining_room_table/lights/command"
+    brightness_state_topic: "home/dining_room_table/lights/brightness/state"
+    brightness_command_topic: "home/dining_room_table/lights/brightness/command"
+    rgb_state_topic: "home/dining_room_table/lights/state"
+    rgb_command_topic: "home/dining_room_table/lights/command"
 
   - platform: mqtt
     name: "Living Room Hue Play"
