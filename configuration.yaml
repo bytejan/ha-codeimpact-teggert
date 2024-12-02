@@ -28,7 +28,7 @@ sensor: !include_dir_merge_list sensors
 
 scene: !include_dir_merge_list scenes
 
-light: !include lights.yaml
+light: !include groups/lights.yaml
 
 # Zones
 zone: !include zones.yaml
