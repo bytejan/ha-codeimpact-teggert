@@ -40,7 +40,6 @@ if ! command -v ha &> /dev/null; then
 fi
 
 # Install desired add-ons
-install_addon "core_ssh"      # SSH & Web Terminal
 install_addon "core_samba"    # Samba share for easy access to config files
 install_addon "core_mosquitto" # MQTT broker
 
