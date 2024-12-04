@@ -42,6 +42,7 @@ fi
 # Install desired add-ons
 install_addon "core_samba"    # Samba share for easy access to config files
 install_addon "core_mosquitto" # MQTT broker
+install_addon "core_vscode" # MQTT broker
 
 # Install HACS
 wget -O - https://get.hacs.xyz | bash -

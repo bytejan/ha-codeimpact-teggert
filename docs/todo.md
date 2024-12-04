@@ -4,4 +4,8 @@
 
 1) Create a user for the mqtt broker
 2) Fix the error when running it
-3) install vscode, 
+3) install vscode, aircast 
+
+## Readme
+- explain what aircast does
+- 
