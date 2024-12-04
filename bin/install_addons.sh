@@ -48,7 +48,7 @@ install_addon "core_vscode" # MQTT broker
 wget -O - https://get.hacs.xyz | bash -
 
 # Install desired HACS integrations
-install_hacs_integration "custom-components/alexa_media_player"
-install_hacs_integration "custom-components/sensor.custom_json"
+#install_hacs_integration "custom-components/alexa_media_player"
+#install_hacs_integration "custom-components/sensor.custom_json"
 
 echo "All add-ons and HACS integrations have been installed and configured."
