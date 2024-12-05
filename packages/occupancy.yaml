@@ -23,30 +23,55 @@ input_select:
       - Visitors with kids
       - Home Alone
 
+input_text:
+  detected_people:
+    name: "Detected People"
+    initial: ""
+
 counter:
   my_custom_counter:
     initial: 30
     step: 1
 
+automation:
+  - alias: "Add New Detected Person"
+    trigger:
+      - platform: mqtt
+        topic: "frigate/events"
+    condition:
+      - condition: template
+        value_template: >
+          {{ trigger.payload_json.label != 'unknown' and
+             not is_state('sensor.' ~ trigger.payload_json.label, 'on') }}
+    action:
+      - service: homeassistant.update_entity
+        data:
+          entity_id: "sensor.{{ trigger.payload_json.label }}"
+      - service: input_text.set_value
+        data:
+          entity_id: input_text.detected_people
+          value: >
+            {{ states('input_text.detected_people') + ',' + trigger.payload_json.label }}
+  - alias: "Remove Person After Timeout"
+    trigger:
+      - platform: state
+        entity_id: sensor.detected_people
+        to: "off"
+        for:
+          hours: 1
+    action:
+      - service: input_text.set_value
+        data:
+          entity_id: input_text.detected_people
+          value: >
+            {{ states('input_text.detected_people') | replace(trigger.to_state.state, '') }}
 
 template:
   - sensor:
-      - name: "John Presence"
-        state: >
-          {% if is_state('binary_sensor.john_detected', 'on') %}
-            Home
-          {% else %}
-            Away
-          {% endif %}
+      - name: "{{ trigger.payload_json.label }}"
+        state: "Detected"
         attributes:
           last_seen: >
-            {{ states.binary_sensor.john_detected.last_changed | as_timestamp | timestamp_local }}
-          current_room: >
-            {% if is_state('binary_sensor.john_in_living_room', 'on') %}
-              Living Room
-            {% elif is_state('binary_sensor.john_in_kitchen', 'on') %}
-              Kitchen
-            {% else %}
-              Unknown
-            {% endif %}
-          mood: "Happy"  # Static for now; can be dynamic
+            {{ now().timestamp() | timestamp_local }}
+          current_room: "{{ trigger.payload_json.camera }}"
+          mood: "Neutral"

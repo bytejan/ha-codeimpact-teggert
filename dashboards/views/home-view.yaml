@@ -17,7 +17,17 @@ cards:
       - light.kitchen_spots
       - light.living_room_lights
     title: Light
-
+  - type: custom:auto-entities
+    card:
+      type: entities
+      title: Detected People
+    filter:
+      include:
+        - domain: sensor
+          attributes:
+            current_room: "*"
+    sort:
+      method: last_changed
 
 
 # col 1: (weather) / main termo under it / peaple at home
