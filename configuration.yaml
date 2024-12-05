@@ -19,18 +19,10 @@ automation: !include_dir_merge_list automations
 
 # Scripts
 script: !include_dir_merge_named scripts/
-
-# Groups
 group: !include_dir_merge_named groups
-
-# Sensors
 sensor: !include_dir_merge_list sensors
-
-scene: !include_dir_merge_list scenes
-
+scene: !include scenes.yaml
 light: !include groups/lights.yaml
-
-# Zones
 zone: !include zones.yaml
 
 # Themes

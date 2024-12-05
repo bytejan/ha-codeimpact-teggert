@@ -89,7 +89,6 @@ The network setup is powered by Ubiquiti’s Unifi ecosystem:
 Crawl Space
 
 First floor
--	Driveway (Optional)
 -	Front yard
 -	Entrance
 -	Hall (Cabinet)
@@ -97,16 +96,15 @@ First floor
 -	Kitchen
 -	Laundry Room
 -	Living Room
--	Dining room
+-	Dining Room
 -	Office
 -	(stairs)
--	Toilet
 -	Backyard
 
 2nd floor
 -	Bathroom
 -	Bedroom
--	Guest room
+-	Guest Room
 -	Landing
 -	Boiler Room
 

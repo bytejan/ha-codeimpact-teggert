@@ -1,0 +1,16 @@
+- name: Movie Night
+  entities:
+    light.tv_back_light: "on"
+    light.ceiling:
+      state: "on"
+      xy_color: [0.33, 0.66]
+      brightness: 200
+- name: Evening
+  entities:
+    light.tv_back_light:
+      state: "on"
+      brightness: 125
+    light.ceiling: off
+    media_player.sony_bravia_tv:
+      state: "on"
+      source: HDMI 1
