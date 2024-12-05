@@ -7,11 +7,15 @@
 *.yaml.save
 home-assistant_v2.db
 home-assistant_v2*
+home-assistant.log.*
 OZW_Log.txt
 http.oauth2.token_cache
 
 # Ignore secrets file
 secrets.yaml
+
+# Ignore custom_components, add the own custom components with a exception rule
+custom_components
 
 # Ignore compiled Python files
 __pycache__/
