@@ -1,9 +1,20 @@
-- title: Overview
-  path: overview
-  cards:
-    - type: entities
-      title: Lights
-      entities:
-        - light.living_room
-        - light.kitchen
-        - light.bedroom
+title: Home
+views:
+  - title: Overview
+    path: overview
+    cards:
+      - type: entities
+        title: Lights
+        entities:
+          - light.living_room
+          - light.kitchen
+          - light.bedroom
+
+
+
+#What do we want here?
+#1) status who is at home
+#2) Modus (sleep, arm)
+#3) Bash upstairs which devices are on
+#4) warning message (calculated)
+#5)
