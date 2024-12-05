@@ -11,10 +11,14 @@ views:
           - light.bedroom
 
 
-
+# col 1: (weather) / main termo under it /
+# col 2: Living room,  bedroom, hall, entrance
+# col 3: kitchen, bathroom, office
+# col 4: calendar
 #What do we want here?
 #1) status who is at home
 #2) Modus (sleep, arm)
 #3) Bash upstairs which devices are on
 #4) warning message (calculated)
-#5)
+#5) weather
+#6) all rooms small
