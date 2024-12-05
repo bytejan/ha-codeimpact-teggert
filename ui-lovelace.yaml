@@ -1,3 +1,2 @@
 views:
-  - !include dashboards/dashboard-main.yaml
   - !include dashboards/dashboard-ipad.yaml
