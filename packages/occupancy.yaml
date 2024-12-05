@@ -27,3 +27,26 @@ counter:
   my_custom_counter:
     initial: 30
     step: 1
+
+
+template:
+  - sensor:
+      - name: "John Presence"
+        state: >
+          {% if is_state('binary_sensor.john_detected', 'on') %}
+            Home
+          {% else %}
+            Away
+          {% endif %}
+        attributes:
+          last_seen: >
+            {{ states.binary_sensor.john_detected.last_changed | as_timestamp | timestamp_local }}
+          current_room: >
+            {% if is_state('binary_sensor.john_in_living_room', 'on') %}
+              Living Room
+            {% elif is_state('binary_sensor.john_in_kitchen', 'on') %}
+              Kitchen
+            {% else %}
+              Unknown
+            {% endif %}
+          mood: "Happy"  # Static for now; can be dynamic
