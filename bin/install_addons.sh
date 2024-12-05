@@ -59,6 +59,9 @@ install_addon() {
 install_addon "core_samba"    # Samba share for easy access to config files
 install_addon "core_mosquitto" # MQTT broker
 install_addon "vscode" # Non-core add-on by name
+install_addon "vscode" # Non-core add-on by name
+install_addon "aircast" # Non-core add-on by name
+install_addon "aircast" # Non-core add-on by name
 
 # Install HACS
 # wget -O - https://get.hacs.xyz | bash -
