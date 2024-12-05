@@ -1,30 +1,25 @@
 title: Home
 views:
-  - title: Overview
-    path: overview
+  - path: default_view
+    title: Home
     cards:
-      - alarm_control_panel:
-          - platform: manual
-            name: Home Alarm
-            unique_id: a_very_unique_id
-            code: "1234"
-            arming_time: 30
-            delay_time: 20
-            trigger_time: 4
-            arming_states:
-              - armed_away
-              - armed_home
-            disarmed:
-              trigger_time: 0
-            armed_home:
-              arming_time: 0
-              delay_time: 0
       - type: entities
-        title: Lights
         entities:
-          - light.living_room
-          - light.kitchen
-          - light.bedroom
+          - person.jan_jaap_arends
+      - type: entities
+        entities:
+          - light.dining_room_spots
+          - light.dining_room_table_lights
+          - light.kitchen_spots
+          - light.living_room_lights
+        title: Light
+      - show_current: true
+        show_forecast: true
+        type: weather-forecast
+        entity: weather.buienradar
+        forecast_type: daily
+        secondary_info_attribute: temperature
+        name: Home
 
 
 # col 1: (weather) / main termo under it /

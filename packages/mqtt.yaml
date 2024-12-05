@@ -2,7 +2,7 @@ mqtt:
   - alarm_control_panel:
       state_topic: "home/alarm"
       command_topic: "home/alarm/set"
-      
+
 light:
   - platform: mqtt
     name: "Kitchen Spots"
