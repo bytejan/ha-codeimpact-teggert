@@ -3,3 +3,9 @@ input_boolean:
     name: Medicine Reminder
     initial: off
     icon: mdi:tablet
+
+sensor:
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
