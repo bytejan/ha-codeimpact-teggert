@@ -1,8 +1,16 @@
-lovelace:
-  mode: yaml
-  dashboards:
-    dashboard-ipad:
-      mode: yaml
-      filename: dashboards/dashboard-ipad.yaml
-      title: Ipad
-      icon: mdi:home
+#lovelace:
+#  mode: yaml
+#  dashboards:
+#    dashboard-ipad:
+#      mode: yaml
+#      filename: dashboards/dashboard-ipad.yaml
+#      title: Ipad
+#      icon: mdi:home
+#lovelace:
+#  mode: yaml
+#  dashboards:
+#    dashboard-ipad:
+#      mode: yaml
+#      filename: dashboards/dashboard-ipad.yaml
+#      title: Ipad
+#      icon: mdi:home
