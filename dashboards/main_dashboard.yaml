@@ -1,11 +1,3 @@
 title: Home
 views:
-  - title: Overview
-    path: overview
-    cards:
-      - type: entities
-        title: Lights
-        entities:
-          - light.living_room
-          - light.kitchen
-          - light.bedroom
+  - !include views/home-view.yaml

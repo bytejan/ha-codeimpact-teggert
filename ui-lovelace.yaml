@@ -1,2 +1,2 @@
-#views:
-#  - !include dashboards/dashboard-ipad.yaml
+views:
+  - !include dashboards/views/home-view.yaml

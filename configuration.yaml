@@ -39,13 +39,3 @@ frontend:
 
 # Blueprints
 blueprint: !include_dir_named blueprints/
-
-lovelace:
-  mode: yaml
-  dashboards:
-    main:
-      mode: yaml
-      title: Home
-      filename: dashboards/main_dashboard.yaml
-      icon: mdi:home
-      show_in_sidebar: true
