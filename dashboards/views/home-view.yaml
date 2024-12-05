@@ -1,6 +1,12 @@
 path: default_view
 title: Home
 cards:
+  - type: weather-forecast
+    entity: weather.buienradar
+    show_current: true
+    forecast_type: daily
+    secondary_info_attribute: temperature
+    name: Home
   - type: entities
     entities:
       - person.jan_jaap_arends
@@ -11,13 +17,7 @@ cards:
       - light.kitchen_spots
       - light.living_room_lights
     title: Light
-  - show_current: true
-    show_forecast: true
-    type: weather-forecast
-    entity: weather.buienradar
-    forecast_type: daily
-    secondary_info_attribute: temperature
-    name: Home
+
 
 
 # col 1: (weather) / main termo under it /
