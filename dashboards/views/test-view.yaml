@@ -1,16 +1,16 @@
-- title: Dining Room
-  path: dining-room
-  cards:
-    - type: entities
-      title: Dining Room Spots
-      entities:
-        - light.dining_room_spots
-        - light.dining_table_spot_1
-        - light.dining_table_spot_2
-        - light.dining_table_spot_3
-        - light.hue_bloom_dining_room
+title: Dining Room
+path: dining-room
+cards:
+  - type: entities
+    title: Dining Room Spots
+    entities:
+      - light.dining_room_spots
+      - light.dining_table_spot_1
+      - light.dining_table_spot_2
+      - light.dining_table_spot_3
+      - light.hue_bloom_dining_room
 
-- title: Kitchen
+  - title: Kitchen
   path: kitchen
   cards:
     - type: entities
@@ -18,7 +18,7 @@
       entities:
         - light.kitchen_spots
 
-- title: Living Room
+  - title: Living Room
   path: living-room
   cards:
     - type: entities
