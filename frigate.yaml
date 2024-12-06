@@ -1,0 +1,27 @@
+mqtt:
+  host: core-mosquitto
+  user: mqtt_user
+  password: kI@399!wakkjgi833QQ@k
+
+ffmpeg:
+  hwaccel_args: preset-rpi-64-h264
+
+detectors:
+  coral:
+    type: edgetpu
+    device: usb
+
+cameras:
+  front_yard:
+    detect:
+      width: 1280
+      height: 720
+      fps: 5
+    ffmpeg:
+      inputs:
+        - path: rtsps://10.69.1.1:7441/Wn6VzFj9QQ8SfkGx?enableSrtp
+          roles:
+            - detect
+            - rtmp
+
+version: 0.14
