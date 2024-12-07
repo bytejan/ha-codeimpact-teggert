@@ -11,27 +11,18 @@ homeassistant:
   currency: EUR
   packages: !include_dir_named packages
 
-# Loads default set of integrations. Do not remove.
+frontend:
+  themes: !include_dir_merge_named themes/
+
 default_config:
 
 media_source:
 
-# Automations
-automation: !include_dir_merge_list automations
-
-# Scripts
 script: !include_dir_merge_named scripts/
 group: !include_dir_merge_named groups
 sensor: !include_dir_merge_list sensors
 scene: !include scenes.yaml
 light: !include groups/lights.yaml
 zone: !include zones.yaml
-
-# Themes
-frontend:
-  themes: !include_dir_merge_named themes/
-  set_theme:
-    name: ios-dark-mode-blue-red
-
-# Blueprints
 blueprint: !include_dir_named blueprints/
+automation: !include_dir_merge_list automations
