@@ -1,6 +1,6 @@
 google_assistant:
-  project_id: !secret google_cloud_project
-  service_account: !include SERVICE_ACCOUNT.JSON
+  cloud_project: !secret google_cloud_project
+  device_project: !secret nest_device_project
 #  report_state: true
 #  expose_by_default: false
 #  secure_devices_pin: !secret secure_devices_pin
