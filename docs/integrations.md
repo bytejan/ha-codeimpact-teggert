@@ -1,0 +1,139 @@
+- withings
+- whois ? 
+- whisper? 
+- wake on lan?
+- voice over ip?
+- videoLAN?
+- uptime?
+- UPnP?
+- UniFi AP
+- air-q?
+- AirGradient?
+- Airly?
+- AIrNow?
+- apple cloud?
+- Apple tv?
+- apple weatherkit?
+- Homekit bridge?
+- Homekit device?
+- iBeacon traker
+- apple itunes? 
+- Azure data explorer?
+- Bluetooth?
+- Buitenradar
+- cloudflare?
+- Coinbase?
+- colorExtractor?
+- cpuspeed?
+- d-link wifi smart plugs?
+- digital loggers?
+- Discord?
+- DLNA?
+- DNS IP?
+- Downloader?
+- DSMR Reader?
+- File?
+- Filesize?
+- flightradar
+- folder watcher?
+- fully kiosk browser?
+- Garages amsterdam?
+- generic camera?
+- geoJson?
+- github?
+- global disster alert?
+- google
+- gps logger?
+- holiday?
+- ifttt?
+- imap?
+- internet printing protocol?
+- irobot
+- jellyfin?
+- knx
+- Kodi?
+- kraken?
+- Local calendar?
+- Local file
+- Local ip address?
+- Local to do?
+- Logitech? -> Squuzebox
+- Microsofot?
+- MQTT
+- Music Assistant
+- Nexcloud
+- nmap tracker
+- notifications for android tv 
+- Notion?
+- Nuki
+- ollama
+- otp
+- onvif
+- oenUV?
+- openweathermap
+- oral b
+- p1 monitor
+- philips
+- pi hole?
+- ping?
+- piper?
+- plex media server?
+- private ble device
+- profiler
+- proximidy
+- pyload?
+- qnap?
+- radarr?
+- rdw?
+- Reolink? Depend on new cam
+- RIVM Stookalert
+- RTSPtoWebRTC?
+- sabNZB?
+- Scrape?
+- screen away?
+- Season?
+- Sentry?
+- Shelly?
+- Shopping list?
+- Slack?
+- Sleep iq?
+- snappcast?
+- Somfy?
+- Sonarr?
+- Sonos
+- speedtest.net?
+- Spotify
+- SQL?Steam?
+- Stookwijzer
+- Sun
+- Sun weg?
+- Synology?
+- System monitor?
+- Tado?
+- Tailwind?
+- Telegram?
+- Third reality?
+- Time & Date?
+- Traccar?
+- Tuya?
+- Twillio?
+- Ubiquiti
+- Universal Powerline Bus?
+- Uonet+ Vulcan?
+- UPnP/IGD?
+- Uptime?
+- VideoLAN?
+- Voice over ip?
+- Wake On LAN?
+- Whisper?
+- Whois?
+- Whithings?
+- Workday?
+- World Air Quality Index?
+- Worldclock?
+- Wyoming Protocol?
+- Yale?
+- Zigbee Home Automation?
+- Zodiac?
+- ZonderGas?
+- 

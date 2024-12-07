@@ -1,0 +1,25 @@
+input_boolean:
+  nobody_home:
+    name: Nobody home
+    initial: false
+    icon: mdi:beach
+  friends_visit:
+    name: Friends visit
+    initial: false
+    icon: mdi:kabaddi
+  family_visit:
+    name: Family visit
+    initial: false
+    icon: mdi:human-male-male-child
+  business_visit:
+    name: Business visit
+    initial: false
+    icon: mdi:account-tie-woman
+
+input_number:
+  attendees:
+    name: attendees_in_house
+    initial: 0
+    min: 0
+    max: 100
+    step: 1

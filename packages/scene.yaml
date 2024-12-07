@@ -1,0 +1,16 @@
+#scene:
+#  - id: '1707342066053'
+#    name: Movie nights
+#    entities:
+#      media_player.kitchen_speaker:
+#        device_class: speaker
+#        friendly_name: Kitchen speaker
+#        supported_features: 152461
+#        state: 'off'
+#      tts.google_en_com:
+#        friendly_name: Google en com
+#        state: unknown
+#    icon: mdi:popcorn
+#    metadata:
+#      tts.google_en_com:
+#        entity_only: true

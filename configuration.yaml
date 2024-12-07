@@ -30,6 +30,8 @@ zone: !include zones.yaml
 # Themes
 frontend:
   themes: !include_dir_merge_named themes/
+  set_theme:
+    name: ios-dark-mode-blue-red
 
 # Blueprints
 blueprint: !include_dir_named blueprints/
