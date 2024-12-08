@@ -8,43 +8,45 @@
 #   #       name: Home
 #   - !include views/home-view.yaml
 #
-resources:
-  # Auto entities
-  - url: "/local/community/lovelace-auto-entities/auto-entities.js"
-    type: module
-    repo: "https://github.com/thomasloven/lovelace-auto-entities"
-views:
-  - title: Home test
-    sections:
-      - type: grid
+lovelace:
+  mode: yaml
+  resources:
+    - url: /hacsfiles/auto-entities/auto-entities.js
+      type: module
+    - url: /hacsfiles/button-card/button-card.js
+      type: module
+  views:
+    - title: Home test
+      sections:
+        - type: grid
+  
+         # Main Cards Section
+          cards:
+          - type: weather-forecast
+            entity: weather.buienradar
+            name: Forecast Cozy Home
 
-       # Main Cards Section
-        cards:
-        - type: weather-forecast
-          entity: weather.buienradar
-          name: Forecast Cozy Home
-
-        - type: custom:auto-entities
-          card:
-            type: horizontal-stack
-          filter:
-            include:
-              - entity_id: /^person_resident_.*/  # Regex for person entities
-          card_options:
-            type: custom:button-card
-          card:
-            type: custom:button-card
-            entity: this.entity
-            name: >
-              {{ state_attr(config.entity, 'name') }}
-            styles:
-              card:
-                - background-image: >
-                    url("/local/images/{{ config.entity.split('_')[2] }}.jpg")
-                - height: 150px
-                - width: 150px
-              custom_fields:
-                role: >
-                  Role: {{ state_attr(config.entity, 'role') }}
-                trackers: >
-                  Trackers: {{ state_attr(config.entity, 'trackers') | join(', ') }}
+          - type: custom:auto-entities
+            card:
+              type: horizontal-stack
+            filter:
+              include:
+                - entity_id: /^person_resident_.*/  # Regex for person entities
+            card_options:
+              type: custom:button-card
+            card:
+              type: custom:button-card
+              entity: this.entity
+              name: >
+                {{ state_attr(config.entity, 'name') }}
+              styles:
+                card:
+                  - background-image: >
+                      url("/local/images/{{ config.entity.split('_')[2] }}.jpg")
+                  - height: 150px
+                  - width: 150px
+                custom_fields:
+                  role: >
+                    Role: {{ state_attr(config.entity, 'role') }}
+                  trackers: >
+                    Trackers: {{ state_attr(config.entity, 'trackers') | join(', ') }}
