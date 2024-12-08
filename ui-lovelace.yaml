@@ -8,6 +8,17 @@
 #   #       name: Home
 #   - !include views/home-view.yaml
 #
+#views:
+#  - title: Home test
+#    sections:
+#      - type: grid
+#        cards:
+#          - show_current: true
+#            show_forecast: true
+#            type: weather-forecast
+#            entity: weather.buienradar
+#            forecast_type: daily
+#            name: Forecast Cozy Home
 views:
   - title: Home test
     sections:
@@ -19,71 +30,83 @@ views:
             entity: weather.buienradar
             forecast_type: daily
             name: Forecast Cozy Home
-          - type: conditional
-            conditions: []
+
+  # Main Cards Section
+  - cards:
+      - type: weather-forecast
+        entity: weather.buienradar
+        name: Forecast Cozy Home
+
+      - type: custom:auto-entities
+        card:
+          type: horizontal-stack
+        filter:
+          include:
+            - entity_id: /^person_resident_.*/  # Regex for person entities
+        card_options:
+          type: custom:button-card
+        card:
+          type: custom:button-card
+          entity: this.entity
+          name: >
+            {{ state_attr(config.entity, 'name') }}
+          styles:
             card:
-              type: horizontal-stack
-              cards:
-                - camera_view: auto
-                  type: picture-glance
-                  title: >-
-                    Jan-Jaap (pic, status, batt, loc, next agenda item, alarm
-                    set)
-                  image: https://demo.home-assistant.io/stub_config/kitchen.png
-                  entities:
-                    - sensor.time
-                    - sensor.date
-                  image_entity: person.jan_jaap_arends
-                - camera_view: auto
-                  type: picture-glance
-                  title: Kate  (pic, status, batt, loc, next agenda item, alarm set)
-                  image: https://demo.home-assistant.io/stub_config/kitchen.png
-                  entities:
-                    - sensor.unnamed_device
-                    - sensor.sun_next_midnight
-                  image_entity: person.snail
-          - type: markdown
-            content: >-
-              Who - type (family, owner, guest, client, unknown) - doing
-              (walking to, sitting) - where
-            title: Occupancy
-          - type: markdown
-            content: >-
-              Turned on devices: Lamps, pc's, Fans, wash, dryer, sucker, tv's,
-              media
-            title: Turned on
-          - type: heading
-            icon: mdi:fridge
-            heading: Media
-            heading_style: title
+              - background-image: >
+                  url("/local/images/{{ config.entity.split('_')[2] }}.jpg")
+              - height: 150px
+              - width: 150px
+            custom_fields:
+              role: >
+                Role: {{ state_attr(config.entity, 'role') }}
+              trackers: >
+                Trackers: {{ state_attr(config.entity, 'trackers') | join(', ') }}
+
+      - type: markdown
+        content: >-
+          Who - type (family, owner, guest, client, unknown) - doing
+          (walking to, sitting) - where
+        title: Occupancy
+
+      - type: markdown
+        content: >-
+          Turned on devices: Lamps, PCs, Fans, Washer, Dryer, Vacuum, TVs,
+          Media
+        title: Turned on
+
+      - type: heading
+        icon: mdi:fridge
+        heading: Media
+        heading_style: title
+
       - type: grid
         cards:
           - type: horizontal-stack
             cards:
-              - type: horizontal-stack
-                cards:
-                  - type: markdown
-                    content: status home (sleep, away, on holiday, present)
+              - type: markdown
+                content: status home (sleep, away, on holiday, present)
               - type: markdown
                 content: |-
-                  Importent messages, like:
-                  Tomorrow trash
-                  weather change
-                  files, p2000
+                  Important messages, like:
+                  - Tomorrow: trash
+                  - Weather change
+                  - Files, P2000 alerts
               - type: markdown
-                content: energy, water, big users
+                content: Energy, water, major users
               - type: markdown
                 content: |-
                   Doors open
-                  motion
+                  Motion detected
             grid_options:
               columns: full
+
           - type: markdown
             content: Doorbell (conditional)
             grid_options:
               columns: full
-          - square: true
-            type: grid
+
+          - type: grid
+            square: true
             cards:
               - alert_classes:
                   - motion
@@ -162,31 +185,25 @@ views:
             columns: 2
             grid_options:
               columns: full
-        column_span: 2
-      - type: grid
-        cards:
-          - type: markdown
-            content: |-
-              Temp / humidity in top, when click on temp, heating popup
 
-              Armed, disarmed in top, when click to change
-
-              Scene in top, click for change
-
-              energy usage in top
-
-              water usage in top
-
-              air quality in top
-
-              Lock status in top
-          - camera_view: auto
-            type: picture-glance
-            title: Front (cam yard, yam entrance, cam doorbell)
-            image: https://demo.home-assistant.io/stub_config/kitchen.png
-            entities:
-              - sensor.sun_next_dawn
-              - sensor.sun_next_dusk
+          - type: grid
+            cards:
+              - type: markdown
+                content: |-
+                  - Temp / humidity in top; click temp to view heating popup
+                  - Armed/disarmed in top; click to change
+                  - Scene in top; click to change
+                  - Energy usage in top
+                  - Water usage in top
+                  - Air quality in top
+                  - Lock status in top
+              - camera_view: auto
+                type: picture-glance
+                title: Front (Cam yard, Cam entrance, Cam doorbell)
+                image: https://demo.home-assistant.io/stub_config/kitchen.png
+                entities:
+                  - sensor.sun_next_dawn
+                  - sensor.sun_next_dusk
     badges:
       - type: entity
         entity: alarm_control_panel.home_alarm

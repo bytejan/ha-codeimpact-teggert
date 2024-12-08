@@ -34,6 +34,20 @@ counter:
     step: 1
 
 automation:
+  - alias: "Frigate Person Detection"
+    trigger:
+      platform: mqtt
+      topic: frigate/events
+    condition:
+      condition: template
+      value_template: >
+        {{ trigger.payload_json["camera"] not in ["ignored_camera1", "ignored_camera2"] }}
+    action:
+      - service: notify.mobile_app_your_device
+        data:
+          message: "Motion detected on {{ trigger.payload_json['camera'] }}!"
+
+
   - alias: "Add New Detected Person"
     trigger:
       - platform: mqtt
@@ -75,3 +89,9 @@ template:
             {{ now().timestamp() | timestamp_local }}
           current_room: "{{ trigger.payload_json.camera }}"
           mood: "Neutral"
+
+action:
+  - service: system_log.write
+    data:
+      message: "Frigate event: {{ trigger.payload_json }}"
+      level: info
