@@ -1,5 +1,8 @@
 lovelace:
   mode: yaml
+  resources:
+    - url: https://fonts.googleapis.com/css?family=Comfortaa&display=swap
+      type: css
 #   # dashboards:
 #   #   dashboard-ipad:
 #   #     mode: yaml
