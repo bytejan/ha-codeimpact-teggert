@@ -8,17 +8,11 @@
 #   #       name: Home
 #   - !include views/home-view.yaml
 #
-#views:
-#  - title: Home test
-#    sections:
-#      - type: grid
-#        cards:
-#          - show_current: true
-#            show_forecast: true
-#            type: weather-forecast
-#            entity: weather.buienradar
-#            forecast_type: daily
-#            name: Forecast Cozy Home
+resources:
+  # Auto entities
+  - url: "/local/community/lovelace-auto-entities/auto-entities.js"
+    type: module
+    repo: "https://github.com/thomasloven/lovelace-auto-entities"
 views:
   - title: Home test
     sections:
