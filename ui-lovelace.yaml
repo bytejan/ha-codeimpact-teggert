@@ -15,38 +15,38 @@ lovelace:
       type: module
     - url: /hacsfiles/button-card/button-card.js
       type: module
-  views:
-    - title: Home test
-      sections:
-        - type: grid
-  
-         # Main Cards Section
-          cards:
-          - type: weather-forecast
-            entity: weather.buienradar
-            name: Forecast Cozy Home
+views:
+  - title: Home test
+    sections:
+      - type: grid
 
-          - type: custom:auto-entities
-            card:
-              type: horizontal-stack
-            filter:
-              include:
-                - entity_id: /^person_resident_.*/  # Regex for person entities
-            card_options:
-              type: custom:button-card
-            card:
-              type: custom:button-card
-              entity: this.entity
-              name: >
-                {{ state_attr(config.entity, 'name') }}
-              styles:
-                card:
-                  - background-image: >
-                      url("/local/images/{{ config.entity.split('_')[2] }}.jpg")
-                  - height: 150px
-                  - width: 150px
-                custom_fields:
-                  role: >
-                    Role: {{ state_attr(config.entity, 'role') }}
-                  trackers: >
-                    Trackers: {{ state_attr(config.entity, 'trackers') | join(', ') }}
+       # Main Cards Section
+        cards:
+        - type: weather-forecast
+          entity: weather.buienradar
+          name: Forecast Cozy Home
+
+        - type: custom:auto-entities
+          card:
+            type: horizontal-stack
+          filter:
+            include:
+              - entity_id: /^person_resident_.*/  # Regex for person entities
+          card_options:
+            type: custom:button-card
+          card:
+            type: custom:button-card
+            entity: this.entity
+            name: >
+              {{ state_attr(config.entity, 'name') }}
+            styles:
+              card:
+                - background-image: >
+                    url("/local/images/{{ config.entity.split('_')[2] }}.jpg")
+                - height: 150px
+                - width: 150px
+              custom_fields:
+                role: >
+                  Role: {{ state_attr(config.entity, 'role') }}
+                trackers: >
+                  Trackers: {{ state_attr(config.entity, 'trackers') | join(', ') }}
