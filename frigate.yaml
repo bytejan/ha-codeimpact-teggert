@@ -23,15 +23,15 @@ cameras:
           roles:
             - detect
             - rtmp
-    office_cam:
-      detect:
-        width: 1280
-        height: 720
-        fps: 5
-      ffmpeg:
-        inputs:
-          - path: rtsp://admin:060511@10.69.4.201:554/live/profile.0
-            roles:
-              - detect
-              - rtmp
+  office_cam:
+    detect:
+      width: 1280
+      height: 720
+      fps: 5
+    ffmpeg:
+      inputs:
+        - path: rtsp://admin:060511@10.69.4.201:554/live/profile.0
+          roles:
+            - detect
+            - rtmp
 version: 0.14

@@ -22,7 +22,8 @@ lovelace:
       type: css
     - url: "/local/community/lovelace-auto-entities/auto-entities.js"
       type: module
-
+    - url: "/local/community/button-card/button-card.js"
+      type: module
 default_config:
 
 media_source:
