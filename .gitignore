@@ -10,7 +10,7 @@ home-assistant_v2*
 home-assistant.log.*
 OZW_Log.txt
 http.oauth2.token_cache
-
+tts
 # Ignore secrets file
 secrets.yaml
 
