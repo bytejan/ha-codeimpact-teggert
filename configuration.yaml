@@ -12,45 +12,17 @@ homeassistant:
   packages: !include_dir_named packages
   # allowlist_external_dirs:
   #   - /media
-
-frontend:
-  themes: !include_dir_merge_named themes/
-lovelace:
-  mode: yaml
-  resources:
-    - url: https://fonts.googleapis.com/css?family=Comfortaa&display=swap
-      type: css
-    - url: "/local/community/lovelace-auto-entities/auto-entities.js"
-      type: module
-    - url: "/local/community/button-card/button-card.js"
-      type: module
 default_config:
-
 media_source:
 
-# https://www.home-assistant.io/integrations/google_assistant/
-google_assistant:
-  project_id: secret google_cloud_project
-  service_account: !include SERVICE_ACCOUNT.JSON
-#  report_state: true
-#  exposed_domains:
-#    - switch
-#    - light
-#  entity_config:
-#    switch.kitchen:
-#      name: CUSTOM_NAME_FOR_GOOGLE_ASSISTANT
-#      aliases:
-#        - BRIGHT_LIGHTS
-#        - ENTRY_LIGHTS
-#    light.living_room:
-#      expose: false
-#      room: LIVING_ROOM
-
-script: !include_dir_merge_named scripts/
-group: !include_dir_merge_named groups
-sensor: !include_dir_merge_list sensors
-scene: !include scenes.yaml
-light: !include groups/lights.yaml
-zone: !include zones.yaml
-blueprint: !include_dir_named blueprints/
-automation: !include_dir_merge_list automations
+frontend: !include_dir_merge_named impl/frontend.yaml
+lovelace: !include_dir_merge_named impl/lovelace.yaml
+group: !include_dir_merge_named impl/groups
+person:  !include_dir_merge_named impl/persons.yaml
+scene: !include_dir_merge_named impl/scenes.yaml
+zone: !include groups/zones.yaml
+script: !include_dir_merge_named impl/scripts/
+sensor: !include_dir_merge_named impl/sensors
+light: !include_dir_merge_named impl/lights.yaml
+blueprint: !include_dir_merge_named impl/blueprints/
+automation: !include_dir_merge_named impl/automations

@@ -1,17 +1,17 @@
-#google_assistant:
-#  project_id: !secret google_cloud_project
-  # service_account: !include SERVICE_ACCOUNT.JSON
+# https://www.home-assistant.io/integrations/google_assistant/
+google_assistant:
+  project_id: secret google_cloud_project
+  service_account: !include SERVICE_ACCOUNT.JSON
 #  report_state: true
-#  expose_by_default: false
-#  secure_devices_pin: !secret secure_devices_pin
+#  exposed_domains:
+#    - switch
+#    - light
 #  entity_config:
-#    cover.garage_door:
-#      expose: true
-#    lock.front_door:
-#      expose: true
-#    lock.back_door:
-#      expose: true
-#    lock.garage_exterior_door:
-#      expose: true
-#    light.andrew_desk_lamp:
-#      expose: true
+#    switch.kitchen:
+#      name: CUSTOM_NAME_FOR_GOOGLE_ASSISTANT
+#      aliases:
+#        - BRIGHT_LIGHTS
+#        - ENTRY_LIGHTS
+#    light.living_room:
+#      expose: false
+#      room: LIVING_ROOM

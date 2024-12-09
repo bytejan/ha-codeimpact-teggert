@@ -1,0 +1,8 @@
+  mode: yaml
+  resources:
+    - url: https://fonts.googleapis.com/css?family=Comfortaa&display=swap
+      type: css
+    - url: "/local/community/lovelace-auto-entities/auto-entities.js"
+      type: module
+    - url: "/local/community/button-card/button-card.js"
+      type: module
