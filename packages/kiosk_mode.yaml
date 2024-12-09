@@ -1,0 +1,4 @@
+# kiosk_mode:
+#   non_admin_settings:
+#     hide_header: true
+#     ignore_entity_settings: true

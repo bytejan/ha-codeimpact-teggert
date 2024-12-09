@@ -1,5 +1,206 @@
 device_tracker:
   - platform: unifi_direct
     host: !secret unifi_host
-    username: !secret unifi_user
+    username: !secret unifi_username
     password: !secret unifi_password
+
+input_boolean:
+  nobody_home:
+    name: Nobody home
+    initial: false
+    icon: mdi:beach
+  friends_visit:
+    name: Friends visit
+    initial: false
+    icon: mdi:kabaddi
+  family_visit:
+    name: Family visit
+    initial: false
+    icon: mdi:human-male-male-child
+  business_visit:
+    name: Business visit
+    initial: false
+    icon: mdi:account-tie-woman
+
+input_number:
+  attendees:
+    name: attendees_in_house
+    initial: 0
+    min: 0
+    max: 100
+    step: 1
+# input_boolean:
+#   medicine:
+#     name: Medicine Reminder
+#     initial: off
+#     icon: mdi:tablet
+
+# sensor:
+#   - platform: time_date
+#     display_options:
+#       - 'time'
+#       - 'date'
+# input_select:
+#   who_cooks:
+#     name: Who cooks today
+#     options:
+#       - Paulus
+#       - Anne Therese
+#     initial: Anne Therese
+#     icon: mdi:panda
+#   living_room_preset:
+#     options:
+#       - Visitors
+#       - Visitors with kids
+#       - Home Alone
+
+# input_text:
+#   detected_people:
+#     name: "Detected People"
+#     initial: ""
+
+# counter:
+#   my_custom_counter:
+#     initial: 30
+#     step: 1
+
+# automation:
+#   - alias: "Add New Detected Person"
+#     trigger:
+#       - platform: mqtt
+#         topic: "frigate/events"
+#     condition:
+#       - condition: template
+#         value_template: >
+#           {{ trigger.payload_json.label != 'unknown' and
+#              not is_state('sensor.' ~ trigger.payload_json.label, 'on') }}
+#     action:
+#       - service: homeassistant.update_entity
+#         data:
+#           entity_id: "sensor.{{ trigger.payload_json.label }}"
+#       - service: input_text.set_value
+#         data:
+#           entity_id: input_text.detected_people
+#           value: >
+#             {{ states('input_text.detected_people') + ',' + trigger.payload_json.label }}
+#   - alias: "Remove Person After Timeout"
+#     trigger:
+#       - platform: state
+#         entity_id: sensor.detected_people
+#         to: "off"
+#         for:
+#           hours: 1
+#     action:
+#       - service: input_text.set_value
+#         data:
+#           entity_id: input_text.detected_people
+#           value: >
+#             {{ states('input_text.detected_people') | replace(trigger.to_state.state, '') }}
+
+# template:
+#   - sensor:
+#       - name: "{{ trigger.payload_json.label }}"
+#         state: "Detected"
+#         attributes:
+#           last_seen: >
+#             {{ now().timestamp() | timestamp_local }}
+#           current_room: "{{ trigger.payload_json.camera }}"
+#           mood: "Neutral"
+
+input_boolean:
+  medicine:
+    name: Medicine Reminder
+    initial: off
+    icon: mdi:tablet
+
+sensor:
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+input_select:
+  who_cooks:
+    name: Who cooks today
+    options:
+      - Paulus
+      - Anne Therese
+    initial: Anne Therese
+    icon: mdi:panda
+  living_room_preset:
+    options:
+      - Visitors
+      - Visitors with kids
+      - Home Alone
+
+input_text:
+  detected_people:
+    name: "Detected People"
+    initial: ""
+
+counter:
+  my_custom_counter:
+    initial: 30
+    step: 1
+
+automation:
+  - alias: "Frigate Person Detection"
+    trigger:
+      platform: mqtt
+      topic: frigate/events
+    condition:
+      condition: template
+      value_template: >
+        {{ trigger.payload_json["camera"] not in ["ignored_camera1", "ignored_camera2"] }}
+    action:
+      - service: notify.mobile_app_your_device
+        data:
+          message: "Motion detected on {{ trigger.payload_json['camera'] }}!"
+
+
+  - alias: "Add New Detected Person"
+    trigger:
+      - platform: mqtt
+        topic: "frigate/events"
+    condition:
+      - condition: template
+        value_template: >
+          {{ trigger.payload_json.label != 'unknown' and
+             not is_state('sensor.' ~ trigger.payload_json.label, 'on') }}
+    action:
+      - service: homeassistant.update_entity
+        data:
+          entity_id: "sensor.{{ trigger.payload_json.label }}"
+      - service: input_text.set_value
+        data:
+          entity_id: input_text.detected_people
+          value: >
+            {{ states('input_text.detected_people') + ',' + trigger.payload_json.label }}
+  - alias: "Remove Person After Timeout"
+    trigger:
+      - platform: state
+        entity_id: sensor.detected_people
+        to: "off"
+        for:
+          hours: 1
+    action:
+      - service: input_text.set_value
+        data:
+          entity_id: input_text.detected_people
+          value: >
+            {{ states('input_text.detected_people') | replace(trigger.to_state.state, '') }}
+
+template:
+  - sensor:
+      - name: "{{ trigger.payload_json.label }}"
+        state: "Detected"
+        attributes:
+          last_seen: >
+            {{ now().timestamp() | timestamp_local }}
+          current_room: "{{ trigger.payload_json.camera }}"
+          mood: "Neutral"
+
+action:
+  - service: system_log.write
+    data:
+      message: "Frigate event: {{ trigger.payload_json }}"
+      level: info
