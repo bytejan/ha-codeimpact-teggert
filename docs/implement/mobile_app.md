@@ -1,0 +1,1 @@
+https://www.home-assistant.io/integrations/mobile_app/

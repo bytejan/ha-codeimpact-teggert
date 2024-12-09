@@ -1,0 +1,1 @@
+https://www.home-assistant.io/integrations/homeassistant/#editing-entity-settings-in-yaml

@@ -1,0 +1,1 @@
+https://smarthomescene.com/guides/how-to-setup-browser-mod-2-0-in-home-assistant/
