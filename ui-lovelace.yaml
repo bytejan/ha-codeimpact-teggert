@@ -8,13 +8,7 @@
 #   #       name: Home
 #   - !include views/home-view.yaml
 #
-lovelace:
-  mode: yaml
-  resources:
-    - url: /hacsfiles/auto-entities/auto-entities.js
-      type: module
-    - url: /hacsfiles/button-card/button-card.js
-      type: module
+
 views:
   - title: Home test
     sections:
