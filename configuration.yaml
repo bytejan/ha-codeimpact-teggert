@@ -18,6 +18,7 @@ default_config:
 
 media_source:
 
+# https://www.home-assistant.io/integrations/google_assistant/
 google_assistant:
   project_id: secret google_cloud_project
   service_account: !include SERVICE_ACCOUNT.JSON

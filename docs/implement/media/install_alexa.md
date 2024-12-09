@@ -1,0 +1,1 @@
+https://github.com/alandtse/alexa_media_player/wiki/Configuration

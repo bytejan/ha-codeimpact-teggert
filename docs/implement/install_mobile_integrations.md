@@ -1,0 +1,1 @@
+https://companion.home-assistant.io/docs/core/actions
