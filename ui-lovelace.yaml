@@ -1,13 +1,12 @@
 # views:
-#   # - title: overview
-#   #   icon: mdi:floor-plan
-#   #   cards:
-#   #     - type: weather-forecast
-#   #       entity: weather.buienradar
-#   #       secondary_info_attribute: temperature
-#   #       name: Home
+#  - title: overview
+#    icon: mdi:floor-plan
+#    cards:
+#      - type: weather-forecast
+#        entity: weather.buienradar
+#        secondary_info_attribute: temperature
+#        name: Home
 #   - !include views/home-view.yaml
-#
 
 views:
   - title: Home test

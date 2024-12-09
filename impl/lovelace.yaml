@@ -6,3 +6,5 @@
       type: module
     - url: "/local/community/button-card/button-card.js"
       type: module
+    - url: "/local/community/kiosk-mode/kiosk-mode.js"
+      type: module
