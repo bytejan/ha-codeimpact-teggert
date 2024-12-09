@@ -21,6 +21,10 @@ input_boolean:
     name: Business visit
     initial: false
     icon: mdi:account-tie-woman
+  medicine:
+    name: Medicine Reminder
+    initial: off
+    icon: mdi:tablet
 
 input_number:
   attendees:
@@ -107,17 +111,11 @@ input_number:
 #           current_room: "{{ trigger.payload_json.camera }}"
 #           mood: "Neutral"
 
-input_boolean:
-  medicine:
-    name: Medicine Reminder
-    initial: off
-    icon: mdi:tablet
-
 sensor:
   - platform: time_date
     display_options:
-      - 'time'
-      - 'date'
+      - "time"
+      - "date"
 input_select:
   who_cooks:
     name: Who cooks today
@@ -155,7 +153,6 @@ automation:
       - service: notify.mobile_app_your_device
         data:
           message: "Motion detected on {{ trigger.payload_json['camera'] }}!"
-
 
   - alias: "Add New Detected Person"
     trigger:
@@ -198,9 +195,8 @@ template:
             {{ now().timestamp() | timestamp_local }}
           current_room: "{{ trigger.payload_json.camera }}"
           mood: "Neutral"
-
-action:
-  - service: system_log.write
-    data:
-      message: "Frigate event: {{ trigger.payload_json }}"
-      level: info
+# action:
+#   - service: system_log.write
+#     data:
+#       message: "Frigate event: {{ trigger.payload_json }}"
+#       level: info

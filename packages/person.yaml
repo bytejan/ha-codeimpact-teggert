@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #person:
 #  - name: Jan-Jaap
 #    id: resident_male_jan-jaap
@@ -46,3 +47,48 @@
 #      prefers_music: Spotify
 #      next_meeting: sensor.jan_next_meeting
 #      sleep_mode: input_boolean.jan_sleep_mode
+=======
+person:
+  - name: Jan-Jaap
+    id: a1a57246f6e447c391f2d7f080933c46
+    device_trackers:
+      - device_tracker.jan_phone
+      - device_tracker.jan_smartwatch
+    # metadata:
+    #   prefers_music: Spotify
+    #   next_meeting: sensor.jan_next_meeting
+    #   sleep_mode: input_boolean.jan_sleep_mode
+    #   gender: male
+    #.  role: resident
+  - name: Kate
+    id: resident_female_kate
+    device_trackers: []
+    # metadata:
+    #   prefers_music: Spotify
+    #   next_meeting: sensor.jan_next_meeting
+    #   sleep_mode: input_boolean.jan_sleep_mode
+  - name: Anja Arends
+    id: parent_female_anja
+    device_trackers: []
+    # metadata:
+    #   prefers_music: Spotify
+    #   next_meeting: sensor.jan_next_meeting
+    #   sleep_mode: input_boolean.jan_sleep_mode
+    #   gender: male
+  - name: Jan Arends
+    id: parent_male_jan
+    device_trackers: []
+    # metadata:
+    #   prefers_music: Spotify
+    #   next_meeting: sensor.jan_next_meeting
+    #   sleep_mode: input_boolean.jan_sleep_mode
+    #   gender: male
+  - name: Martijn Aarts
+    id: friend_male_martijn
+    device_trackers: []
+    # metadata:
+    #   prefers_music: Spotify
+    #   next_meeting: sensor.jan_next_meeting
+    #   sleep_mode: input_boolean.jan_sleep_mode
+    #   gender: male
+>>>>>>> b2705e8 (changes)

@@ -35,3 +35,4 @@ __pycache__/
 .jwt_secret
 .timeline
 .vacuum
+SERVICE_ACCOUNT.JSON
