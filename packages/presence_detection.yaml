@@ -3,6 +3,11 @@ device_tracker:
     host: !secret unifi_host
     username: !secret unifi_username
     password: !secret unifi_password
+    new_device_defaults:
+      track_new_devices: true
+  - platform: bluetooth_le_tracker
+    new_device_defaults:
+      track_new_devices: true
 
 input_boolean:
   nobody_home:

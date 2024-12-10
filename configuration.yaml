@@ -14,13 +14,12 @@ homeassistant:
   #   - /media
 default_config:
 media_source:
-
+bluetooth:
 frontend: !include_dir_merge_named impl/frontend.yaml
-lovelace: !include_dir_merge_named impl/lovelace.yaml
 group: !include_dir_merge_named impl/groups
-person:  !include_dir_merge_named impl/persons.yaml
+person: !include_dir_merge_named impl/persons.yaml
 scene: !include_dir_merge_named impl/scenes.yaml
-zone: !include groups/zones.yaml
+zone: !include_dir_merge_named impl/zones.yaml
 script: !include_dir_merge_named impl/scripts/
 sensor: !include_dir_merge_named impl/sensors
 light: !include_dir_merge_named impl/lights.yaml

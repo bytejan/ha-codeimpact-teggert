@@ -1,3 +1,4 @@
+lovelace:
   mode: yaml
   resources:
     - url: https://fonts.googleapis.com/css?family=Comfortaa&display=swap

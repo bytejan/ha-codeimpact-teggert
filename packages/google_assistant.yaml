@@ -1,7 +1,7 @@
 # https://www.home-assistant.io/integrations/google_assistant/
 google_assistant:
   project_id: secret google_cloud_project
-  service_account: !include SERVICE_ACCOUNT.JSON
+  service_account: !include ../SERVICE_ACCOUNT.JSON
 #  report_state: true
 #  exposed_domains:
 #    - switch
