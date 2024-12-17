@@ -10,8 +10,12 @@ homeassistant:
   country: NL
   currency: EUR
   packages: !include_dir_named packages
-  # allowlist_external_dirs:
-  #   - /media
+
+# http:
+#   port: 80
+
+# allowlist_external_dirs:
+#   - /media
 default_config:
 media_source:
 bluetooth:
