@@ -1,0 +1,13 @@
+- name: Enable SSH add-on via API
+  uri:
+    url: "http://homeassistant.local:8123/api/hassio/addons/core_ssh/install"
+    method: POST
+    headers:
+      Authorization: "Bearer {{ homeassistant_api_token }}"
+  when: homeassistant_api_token is defined
+
+- name: Add authorized SSH key
+  copy:
+    src: id_rsa.pub
+    dest: /config/.ssh/authorized_keys
+    mode: '0600'

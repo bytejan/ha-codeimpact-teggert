@@ -1,9 +1,0 @@
-title: Hall
-path: hall
-panel: false
-icon: mdi:bench-back
-badges:
-  - entity: light.ceiling_lights
-    name: Ceiling Lights
-    icon: mdi:bulb
-  - entity: switch.decorative_lights

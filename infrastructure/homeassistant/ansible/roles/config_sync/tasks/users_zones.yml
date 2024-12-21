@@ -1,0 +1,21 @@
+- name: Create Areas
+  uri:
+    url: "http://homeassistant.local:8123/api/config/area_registry"
+    method: POST
+    headers:
+      Authorization: "Bearer {{ homeassistant_api_token }}"
+    body: '{"name": "{{ item }}"}'
+    body_format: json
+  loop:
+    - "Living Room"
+    - "Kitchen"
+    - "Bedroom"
+
+- name: Set Up Zones
+  uri:
+    url: "http://homeassistant.local:8123/api/config/zone"
+    method: POST
+    headers:
+      Authorization: "Bearer {{ homeassistant_api_token }}"
+    body: "{{ lookup('file', 'files/zones.json') }}"
+    body_format: json

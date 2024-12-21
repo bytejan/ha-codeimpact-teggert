@@ -1,0 +1,3 @@
+title: Room Control
+views:
+  - !include views/test-view.yaml

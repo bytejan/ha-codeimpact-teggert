@@ -1,0 +1,9 @@
+- hosts: homeassistant
+  gather_facts: false
+  vars_files:
+    - "../install_config.json"
+
+  roles:
+    - { role: ssh_setup, when: generate_ssh_key }
+    - addons
+    - config_sync

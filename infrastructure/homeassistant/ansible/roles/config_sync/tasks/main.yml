@@ -1,0 +1,5 @@
+- name: Sync Home Assistant Configuration
+  synchronize:
+    src: "../../home-assistant-config/"
+    dest: /config/
+    delete: yes

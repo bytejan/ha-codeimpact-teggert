@@ -1,0 +1,6 @@
+- name: Set Up Git Pull Cron Job
+  cron:
+    name: "Pull Home Assistant Config"
+    minute: "0"
+    hour: "0"
+    job: "cd /config && git pull"

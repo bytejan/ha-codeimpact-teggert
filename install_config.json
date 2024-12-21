@@ -1,0 +1,24 @@
+{
+  "initial_host": "http://homeassistant.local:8123",
+  "users": [
+    { "name": "admin", "username": "admin", "password": "securepassword123" },
+    { "name": "user1", "username": "user1", "password": "password456" }
+  ],
+  "addons": [
+    { "name": "SSH", "slug": "core_ssh" },
+    { "name": "Mosquitto MQTT", "slug": "core_mosquitto" },
+    { "name": "Samba", "slug": "core_samba" }
+  ],
+  "zones": [
+    { "name": "Home", "latitude": 51.5074, "longitude": 0.1278, "radius": 250 },
+    { "name": "Work", "latitude": 51.5155, "longitude": 0.0922, "radius": 100 }
+  ],
+  "areas": [
+    "Living Room",
+    "Kitchen",
+    "Bedroom"
+  ],
+  "integrations": [
+    { "name": "Google Home", "config": { "api_key": "XXXXX" } }
+  ]
+}

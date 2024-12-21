@@ -1,0 +1,23 @@
+alexa:
+  smart_home:
+#    filter:
+#      include_entities:
+#        - light.living_room_lights
+#        - light.master_lights
+#        - input_boolean.abodeupdate
+#        - light.gateway_light_34ce00813670
+#        - light.kitchen_lights
+#        - light.lifx5
+#        - switch.driveway
+#        - switch.wemoporch
+#        - script.tv_youtube_on
+#      include_domains:
+#        - cover
+#    entity_config:
+#      light.gateway_light_34ce00813670:
+#        name: Gateway Light
+#        description: Xiaomi Gateway Light
+#      script.tv_youtube_on:
+#        name: Youtube
+#        description: Youtube on
+# https://github.com/alandtse/alexa_media_player

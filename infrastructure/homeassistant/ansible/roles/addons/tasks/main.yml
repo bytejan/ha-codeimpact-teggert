@@ -1,0 +1,18 @@
+- name: Install Add-ons
+  uri:
+    url: "http://homeassistant.local:8123/api/hassio/addons/{{ item.addon }}/install"
+    method: POST
+    headers:
+      Authorization: "Bearer {{ homeassistant_api_token }}"
+  loop:
+    - { addon: "core_ssh" }
+    - { addon: "core_mosquitto" }
+    - { addon: "core_samba" }
+
+- name: Configure Add-ons
+  copy:
+    src: "files/{{ item.config }}"
+    dest: "/config/addons/{{ item.addon }}/options.json"
+  loop:
+    - { addon: "core_ssh", config: "ssh_config.json" }
+    - { addon: "core_mosquitto", config: "mqtt_config.json" }

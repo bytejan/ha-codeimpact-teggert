@@ -1,0 +1,5 @@
+nest:
+  #   #cloud_project_id: !secret nest_project_id
+  #   project_id: !secret google_project_id
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret

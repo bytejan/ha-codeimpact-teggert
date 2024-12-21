@@ -1,0 +1,2 @@
+[homeassistant]
+homeassistant.local ansible_user=your_ssh_user ansible_password=your_password

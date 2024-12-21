@@ -1,0 +1,33 @@
+{
+  "name": "provision-home-assistant",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/home-assistant/provision-home-assistant/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/home-assistant/provision-home-assistant",
+        "tsConfig": "libs/home-assistant/provision-home-assistant/tsconfig.lib.json",
+        "packageJson": "libs/home-assistant/provision-home-assistant/package.json",
+        "main": "libs/home-assistant/provision-home-assistant/src/index.ts",
+        "assets": ["libs/home-assistant/provision-home-assistant/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

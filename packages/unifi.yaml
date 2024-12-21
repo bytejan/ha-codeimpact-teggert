@@ -1,9 +1,0 @@
-unifi:
-  host: !secret unifi_host
-  username: !secret unifi_username
-  password: !secret unifi_password
-# unifiprotect:
-#   host: !secret unifi_host
-#   username: !secret unifi_username
-#   password: !secret unifi_password
-# https://github.com/Kane610/aiounifi/blob/master/aiounifi/interfaces/vouchers.py

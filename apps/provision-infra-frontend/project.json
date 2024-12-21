@@ -1,0 +1,9 @@
+{
+  "name": "provision-infra-frontend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/provision-infra-frontend/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project provision-infra-frontend --web",
+  "targets": {}
+}

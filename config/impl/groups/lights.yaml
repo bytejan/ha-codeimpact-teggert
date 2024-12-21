@@ -1,0 +1,38 @@
+- platform: group
+  name: "Kitchen Spots"
+  entities:
+    - light.kitchen_spot_1
+    - light.kitchen_spot_2
+    - light.kitchen_spot_3
+    - light.kitchen_spot_4
+    - light.kitchen_spot_5
+    - light.kitchen_spot_6
+    - light.kitchen_spot_7
+    - light.kitchen_spot_8
+
+- platform: group
+  name: "Dining Room Spots"
+  entities:
+    - light.dining_room_spot_1
+    - light.dining_room_spot_2
+    - light.dining_room_spot_3
+    - light.dining_room_spot_4
+    - light.dining_room_spot_5
+
+- platform: group
+  name: "Dining Room Table Lights"
+  entities:
+    - light.dining_table_lamp_1
+    - light.dining_table_lamp_2
+    - light.dining_table_lamp_3
+#    - light.hue_bloom_dining_room
+
+- platform: group
+  name: "Living Room Lights"
+  entities:
+    - light.living_room_spot_1
+    - light.living_room_spot_2
+    - light.living_room_spot_3
+    - light.living_room_spot_4
+    - light.living_room_spot_5
+#    - light.hue_play

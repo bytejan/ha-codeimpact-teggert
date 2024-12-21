@@ -1,0 +1,5 @@
+- name: Deploy Custom Add-ons
+  synchronize:
+    src: "../../custom-addons/"
+    dest: /config/custom_components/
+    delete: yes

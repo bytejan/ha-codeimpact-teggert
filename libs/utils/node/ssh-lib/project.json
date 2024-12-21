@@ -1,0 +1,33 @@
+{
+  "name": "node-ssh-lib",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/utils/node/ssh-lib/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/utils/node/ssh-lib",
+        "tsConfig": "libs/utils/node/ssh-lib/tsconfig.lib.json",
+        "packageJson": "libs/utils/node/ssh-lib/package.json",
+        "main": "libs/utils/node/ssh-lib/src/index.ts",
+        "assets": ["libs/utils/node/ssh-lib/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}
